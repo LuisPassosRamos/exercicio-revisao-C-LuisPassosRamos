@@ -10,8 +10,7 @@ int main()
     printf ("Digite um valor maior ou igual a zero. \n");
     scanf ("%d", &num);
 
-    do{
-
+    do{         
     }while(r != num);
 
     return 0;
