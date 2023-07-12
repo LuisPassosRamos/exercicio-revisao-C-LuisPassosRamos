@@ -10,16 +10,16 @@
    {
     int matriz [10][10];
 
-    for (int i = 0; i < count; i++)
+    for (int i = 0; i < 10; i++)
     {
-        for (int j = 0; j < count; j++)
+        for (int j = 0; j < 10; j++)
         {
-            if ()
+            if (i<j)
             {
-                /* code */
+                
             }
             
-            matriz[i][j] 
+            
         }
         
     }
