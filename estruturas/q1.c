@@ -12,7 +12,7 @@ struct address
 {
     char street[30];
     char district[30];
-    int number;
+    float number;
 };
 
 struct register1
@@ -41,8 +41,10 @@ struct register1 subject(void){
     printf("Digite seu bairro:\n");
     setbuf(stdin, NULL);
     gets(user.home.district);
+
     printf("Digite o número da casa:\n");
     scanf("%d", &user.home.number);
+    
     return (user);
 }
 
@@ -51,9 +53,10 @@ void main()
 {
     
     subject();
+
     printf("O nome do usuário é: %s \n", user.name);
     printf("A data do nascimento do usuário é: %d/%d/%d \n", user.date.day, user.date.month, user.date.year);
     printf("A rua do usuário é: %s \n", user.home.street);
     printf("O bairro do usuário é: %s \n", user.home.district);
-    printf("O número da casa do usuário é: %d \n", user.home.number);
+    printf("O número da casa do usuário é: %.0f \n", user.home.number);
 }
