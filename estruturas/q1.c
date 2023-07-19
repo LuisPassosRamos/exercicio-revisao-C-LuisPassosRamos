@@ -22,11 +22,13 @@ struct register1
     struct address home;
 };
 
-struct register1 subject(void){
-    struct register1 user;
+struct register1 subject(void)
+{
+    struct register1 user[x];
+    int y;
     printf("Digite seu nome:\n");
     setbuf(stdin, NULL);
-    gets(user.name);
+    gets(user.name[y]);
 
     printf("Digite o dia do seu nascimento:\n");
     scanf("%d", &user.date.day);
@@ -44,15 +46,17 @@ struct register1 subject(void){
 
     printf("Digite o número da casa:\n");
     scanf("%d", &user.home.number);
-    
+
     return (user);
 }
 
-
 void main()
 {
-    
-    subject();
+    int x;
+    printf("Digite quantas pessoas serão cadastradas.");
+    scanf ("%d", x);
+
+    subject(x);
 
     printf("O nome do usuário é: %s \n", user.name);
     printf("A data do nascimento do usuário é: %d/%d/%d \n", user.date.day, user.date.month, user.date.year);
