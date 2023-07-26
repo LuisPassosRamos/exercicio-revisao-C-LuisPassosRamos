@@ -8,7 +8,7 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/workspaces/exercicio-revisao-LuisPassosRamos/estruturas",
+      "cwd": "/workspaces/exercicio-revisao-LuisPassosRamos",
       "program": "/workspaces/exercicio-revisao-LuisPassosRamos/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
