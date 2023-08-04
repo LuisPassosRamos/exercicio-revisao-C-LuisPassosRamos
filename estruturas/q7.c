@@ -1,42 +1,54 @@
 #include <stdio.h>
-/*Crie uma estrutura representando uma hora. Essa estrutura deve conter os campos hora, minuto e segundo. 
-Agora, escreva um programa que leia um vetor de cinco posições dessa estrutura e imprima a maior hora.*/
 
-struct hora {
+// Definição da estrutura Hora
+struct Hora {
     int hora;
-    int min;
-    int seg;
+    int minuto;
+    int segundo;
 };
 
-int repHora(){
-    int maiorHora = 0;
-    int temp
-    int temp1
-
-    for (int i = 0; i < 5; i++){
-        printf ("Digite a hora: ");
-        scanf ("%d", &vetor[i].hora);
-
-        printf ("Digite os minutos: ");
-        scanf ("%d", &vetor[i].min);
-        
-        printf ("Digite os segundos: ");
-        scanf ("%d", &vetor[i].seg);
-
-        temp = ((vetor[i].hora * 3600) + (vetor[i].min * 60) + (vetor[i].seg))
-        if (temp > maiorHora){
-            maiorHora = temp
-            temp1 = i
+// Função para comparar as horas (usada na busca da maior hora)
+int compareHoras(const struct Hora *h1, const struct Hora *h2) {
+    if (h1->hora < h2->hora)
+        return -1;
+    else if (h1->hora > h2->hora)
+        return 1;
+    else {
+        if (h1->minuto < h2->minuto)
+            return -1;
+        else if (h1->minuto > h2->minuto)
+            return 1;
+        else {
+            if (h1->segundo < h2->segundo)
+                return -1;
+            else if (h1->segundo > h2->segundo)
+                return 1;
+            else
+                return 0;
         }
     }
-    return temp1;
 }
 
-int main (){
-    struct hora vetor[5];
-    int resposta = repHora();
+int main() {
+    struct Hora horas[5];
 
-    printf ("A maior hora é: %d horas, %d minutos, %d segundos." vetor[resposta].hora, vetor[resposta].min, vetor[resposta].seg);
+    // Leitura dos dados das horas
+    printf("Entre com os dados das horas (formato hh:mm:ss):\n");
+    for (int i = 0; i < 5; i++) {
+        printf("Hora %d: ", i + 1);
+        scanf("%d:%d:%d", &horas[i].hora, &horas[i].minuto, &horas[i].segundo);
+    }
 
-    
+    // Buscar a maior hora no vetor
+    struct Hora maiorHora = horas[0];
+    for (int i = 1; i < 5; i++) {
+        if (compareHoras(&horas[i], &maiorHora) == 1) {
+            maiorHora = horas[i];
+        }
+    }
+
+    // Exibir a maior hora
+    printf("\nA maior hora no vetor é: %02d:%02d:%02d\n", maiorHora.hora, maiorHora.minuto, maiorHora.segundo);
+
+    return 0;
 }
