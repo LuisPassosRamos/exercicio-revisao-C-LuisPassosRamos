@@ -10,6 +10,12 @@ struct Vdata
     int ano;
 };
 
+int diferenca(const struct Vdata *ponteiro[2]){
+    int mes[12] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+    for (int )
+
+}
+
 int main()
 {
     struct Vdata data[2];
@@ -18,5 +24,5 @@ int main()
         printf ("Digite a %dª data (formato dd:mm:aaaa): ", i+1);
         scanf ("%d:%d:%d", &data[i].dia, &data[i].mes, &data[i].ano);
     }
-
+    diferenca(&data[2]);
 }
