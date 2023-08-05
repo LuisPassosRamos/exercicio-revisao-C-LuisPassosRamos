@@ -31,9 +31,12 @@ int main()
         scanf ("%f", &atdata[i].altura);
         getchar();
     }
-    for (int i = 0; i < 5; i++){
-        for (int j = 0; j < 5; j++){
-            if (atdata[i].idade > atdata[j].idade){
+    for (int i = 0; i < 5; i++)
+    {
+        for (int j = 0; j < 5; j++)
+        {
+            if (atdata[i].idade > atdata[j].idade)
+            {
 
                 temp.idade = atdata[i].idade;
                 atdata[i].idade = atdata[j].idade;
@@ -53,7 +56,8 @@ int main()
             }
         }
     }
-    for (int i = 0; i < 5; i++){
+    for (int i = 0; i < 5; i++)
+    {
         printf ("\nNome: %s, Idade: %d, Altura: %.2f, Esporte: %s", atdata[i].nome, atdata[i].idade, atdata[i].altura, atdata[i].esporte);
     }
     return 0;
