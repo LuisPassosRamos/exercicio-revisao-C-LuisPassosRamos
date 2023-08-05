@@ -14,7 +14,7 @@ struct atleta
 int main()
 {
     struct atleta atdata[5];
-    struct atleta velho;
+    struct atleta temp;
     for (int i = 0; i < 5; i++)
     {
         printf ("\nDigite o nome do atleta %d: ", i+1);
@@ -30,10 +30,31 @@ int main()
         printf ("\nDigite a altura do atleta %d", i+1);
         scanf ("%f", &atdata[i].altura);
         getchar();
-
-
     }
+    for (int i = 0; i < 5; i++){
+        for (int j = 0; j < 5; j++){
+            if (atdata[i].idade > atdata[j].idade){
 
+                temp.idade = atdata[i].idade;
+                atdata[i].idade = atdata[j].idade;
+                atdata[j].idade = temp.idade;
 
+                strcpy(temp.nome, atdata[i].nome);
+                strcpy(atdata[i].nome, atdata[j].nome);
+                strcpy(atdata[j].nome, temp.nome);
+
+                strcpy(temp.esporte, atdata[i].esporte);
+                strcpy(atdata[i].esporte, atdata[j].esporte);
+                strcpy(atdata[j].esporte, temp.esporte);
+
+                temp.altura = atdata[i].altura;
+                atdata[i].altura = atdata[j].altura;
+                atdata[j].altura = temp.altura;
+            }
+        }
+    }
+    for (int i = 0; i < 5; i++){
+        printf ("\nNome: %s, Idade: %d, Altura: %.2f, Esporte: %s", atdata[i].nome, atdata[i].idade, atdata[i].altura, atdata[i].esporte);
+    }
     return 0;
 }
