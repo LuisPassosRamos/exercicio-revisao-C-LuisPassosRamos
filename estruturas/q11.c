@@ -10,19 +10,50 @@ struct Vdata
     int ano;
 };
 
-int diferenca(const struct Vdata *ponteiro[2]){
-    int mes[12] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-    for (int )
+int diferenca(struct Vdata data[2], struct Vdata *ponteiro)
+{
+    int mesDias[12] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+    if (data[1].ano > data[2].ano)
+    {
+        ponteiro->ano = (data[1].ano - data[2].ano);
+    }
+    else ponteiro->ano = (data[2].ano - data[1].ano);
 
+    ponteiro->ano = (ponteiro->ano*365);
+
+    if (data[1].mes > data[2].mes)
+    {
+        ponteiro->mes = (data[1].mes - data[2].mes);
+    }
+    else ponteiro->mes = (data[2].mes - data[1].mes);
+
+
+    if (data[1].dia > data[2].dia)
+    {
+        ponteiro->dia = (data[1].dia - data[2].dia);
+    }
+    else ponteiro->dia = (data[2].dia - data[1].dia);
+
+    for (int i = (ponteiro->mes - 1); i > 0; i--)
+    {
+        ponteiro->dia += mesDias[i];
+    }
+
+    return (ponteiro->ano + ponteiro->dia);
 }
 
 int main()
 {
     struct Vdata data[2];
+    struct Vdata Ddata;
+
     for (int i = 0; i < 2; i++)
     {
-        printf ("Digite a %dª data (formato dd:mm:aaaa): ", i+1);
-        scanf ("%d:%d:%d", &data[i].dia, &data[i].mes, &data[i].ano);
+        printf ("Digite a %dª data (formato dd/mm/aaaa): ", i+1);
+        scanf ("%d/%d/%d", &data[i].dia, &data[i].mes, &data[i].ano);
     }
-    diferenca(&data[2]);
+    int dias = diferenca(data, &Ddata);
+
+    printf ("Diferenca de dias: %d", dias);
+
 }
