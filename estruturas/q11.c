@@ -1,8 +1,5 @@
 #include <stdio.h>
-/*Escreva um programa que contenha uma estrutura representando uma data válida.
-Essa estrutura deve conter os campos dia, mês e ano.
-Em seguida, leia duas datas e armazene nessa estrutura.
-Calcule e exiba o número de dias que decorreram entre as duas datas.*/
+
 struct Vdata
 {
     int dia;
@@ -10,36 +7,41 @@ struct Vdata
     int ano;
 };
 
+int isBissexto(int ano) {
+    return (ano % 4 == 0 && ano % 100 != 0) || (ano % 400 == 0);
+}
+
 int diferenca(struct Vdata data[2], struct Vdata *ponteiro)
 {
     int mesDias[12] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-    if (data[1].ano > data[2].ano)
-    {
-        ponteiro->ano = (data[1].ano - data[2].ano);
-    }
-    else ponteiro->ano = (data[2].ano - data[1].ano);
+    int totalDias = 0;
 
-    ponteiro->ano = (ponteiro->ano*365);
+    // Inicializar ponteiro com valores iniciais
+    ponteiro->ano = 0;
+    ponteiro->mes = 0;
+    ponteiro->dia = 0;
 
-    if (data[1].mes > data[2].mes)
-    {
-        ponteiro->mes = (data[1].mes - data[2].mes);
-    }
-    else ponteiro->mes = (data[2].mes - data[1].mes);
+    // Ano bissexto do primeiro ano
+    if (isBissexto(data[0].ano) && data[0].mes <= 2)
+        mesDias[1] = 29;
 
+    for (int i = data[0].mes; i <= 12; i++)
+        totalDias += mesDias[i - 1] - data[0].dia;
 
-    if (data[1].dia > data[2].dia)
-    {
-        ponteiro->dia = (data[1].dia - data[2].dia);
-    }
-    else ponteiro->dia = (data[2].dia - data[1].dia);
+    // Anos completos
+    for (int i = data[0].ano + 1; i < data[1].ano; i++)
+        totalDias += isBissexto(i) ? 366 : 365;
 
-    for (int i = (ponteiro->mes - 1); i > 0; i--)
-    {
-        ponteiro->dia += mesDias[i];
-    }
+    // Ano bissexto do último ano
+    if (isBissexto(data[1].ano) && data[1].mes > 2)
+        mesDias[1] = 29;
 
-    return (ponteiro->ano + ponteiro->dia);
+    for (int i = 1; i < data[1].mes; i++)
+        totalDias += mesDias[i - 1];
+
+    totalDias += data[1].dia;
+
+    return totalDias;
 }
 
 int main()
@@ -49,11 +51,13 @@ int main()
 
     for (int i = 0; i < 2; i++)
     {
-        printf ("Digite a %dª data (formato dd/mm/aaaa): ", i+1);
-        scanf ("%d/%d/%d", &data[i].dia, &data[i].mes, &data[i].ano);
+        printf("Digite a %dª data (formato dd:mm:aaaa): ", i + 1);
+        scanf("%d:%d:%d", &data[i].dia, &data[i].mes, &data[i].ano);
     }
+
     int dias = diferenca(data, &Ddata);
 
-    printf ("Diferenca de dias: %d", dias);
+    printf("Diferenca de horario: %d", dias);
 
+    return 0;
 }

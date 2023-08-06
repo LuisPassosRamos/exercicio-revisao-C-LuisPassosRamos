@@ -11,9 +11,7 @@ int func(int n)
 }
 
 int main(void){
-    
-    int n = 5;
 
-    int soma = func(n);
+    int soma = func(5);
     printf("Resultado %d", soma);
 }
