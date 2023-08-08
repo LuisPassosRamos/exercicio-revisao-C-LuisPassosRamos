@@ -1,11 +1,20 @@
 #include <stdio.h>
-/*Escreva uma função recursiva que receba por parâmetro dois valores inteiros x e y e calcule e retorne o resultado de (x^y) para o programa principal.*/
-int potencia(int x, int y){
 
+int potenciaRecursiva(int x, int y) {
+    // Caso base: qualquer número elevado a 0 é 1
+    if (y == 0) {
+        return 1;
+    }
+    // Caso recursivo: x elevado a y é igual a x * x^(y-1)
+    return x * potenciaRecursiva(x, y - 1);
 }
 
-int main (){
-    int x,y;
-    potencia (x,y);
+int main() {
+    int x = 2; // Base
+    int y = 5; // Expoente
+
+    int resultado = potenciaRecursiva(x, y);
+    printf("%d elevado a %d é igual a %d\n", x, y, resultado);
+
     return 0;
 }
