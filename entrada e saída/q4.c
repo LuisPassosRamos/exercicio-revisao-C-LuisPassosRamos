@@ -1,14 +1,21 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
+#include<stdio.h>
+#include<stdlib.h>
 
-int main (){
+//Ler uma temperatura em graus Fahrenheit e apresentá-la convertida em graus Celsius.
+int main()
+{
+    //Declarando as variáveis para graus Celsius e para Fahrenheit;
     float f, c;
-    printf ("Digite a temperatura em Fahrenheit. \n");
-    scanf ("%f", &f);
 
-    c = ((f-32)*(5/9));
+    //Solicitando e guardando o valor da temperatura em Fahrenheit;
+    printf("Digite a temperatura em Fahrenheit.\n");
+    scanf("%f",&f);
 
-    printf ("%.2f em graus Celsius é igual a: %.2f \n", f, c);
+    //Convertendo o valor guardado de Fahrenheit usando a fórmula de conversão para graus Celsius;
+    c=((f-32)*(5/9));
+
+    //Retornando o resultado em Celsius;
+    printf("%.2f em Celsius é igual a: %.2f \n", f, c);
+
     return 0;
 }

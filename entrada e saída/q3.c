@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
-#include<math.h>
+
 //Ler uma temperatura em graus Celsius e apresentá-la convertida em graus Fahrenheit.
 int main ()
 {

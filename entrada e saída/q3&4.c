@@ -10,20 +10,20 @@ float conversaoF ()
     //Solicitando e guardando o valor da temperatura em graus Celsius;
     printf("\nDigite a temperatura em graus Celsius. \n");
 
-    scanf("%f", &c);
+    scanf("%f",&c);
 
     //Retornando o resultado em Fahrenheit;
     return ((9*c+160)/5);
 }
 //Ler uma temperatura em graus Fahrenheit e apresentá-la convertida em graus Celsius.
-float conversaoC ()
+float conversaoC()
 {
     //Declarando as variáveis para graus Celsius e para Fahrenheit;
     float f;
 
     //Solicitando e guardando o valor da temperatura em Fahrenheit;
-    printf ("Digite a temperatura em Fahrenheit. \n");
-    scanf ("%f", &f);
+    printf("Digite a temperatura em Fahrenheit.\n");
+    scanf("%f",&f);
 
     //Retornando o resultado em Fahrenheit;
     return ((f-32)*(5/9));
