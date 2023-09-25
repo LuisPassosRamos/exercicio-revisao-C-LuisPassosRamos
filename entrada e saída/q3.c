@@ -11,7 +11,7 @@ int main ()
 
     scanf("%f", &c);
     //Convertendo o valor guardado de Celsius usando a fórmula de conversão para Fahrenheit;
-    f=(9*c+160)/5);
+    f=((9*c+160)/5);
     //Retornando o resultado em Fahrenheit;
     printf("%.2f em Fahrenheit é igual a: %.2f \n", c, f);
 
