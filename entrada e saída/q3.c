@@ -9,7 +9,7 @@ int main ()
     //Solicitando e guardando o valor da temperatura em graus Celsius;
     printf("Digite a temperatura em graus Celsius. \n");
 
-    scanf("%f", &c);
+    scanf("%f",&c);
     //Convertendo o valor guardado de Celsius usando a fórmula de conversão para Fahrenheit;
     f=((9*c+160)/5);
     //Retornando o resultado em Fahrenheit;

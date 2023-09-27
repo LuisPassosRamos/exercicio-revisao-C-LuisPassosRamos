@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
-#include<math.h>
+
 /*Desenvolver a lógica para um programa que efetue o cálculo da área de uma circunferência,
 apresentando a medida da área calculada.*/
 int main()

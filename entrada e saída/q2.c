@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
-#include<math.h>
+
 /*Construir um programa que efetue o cálculo do salário líquido de um professor.
    Para fazer este programa, você deverá possuir alguns dados, tais como:
    valor da hora-aula, número de horas trabalhadas no mês e o percentual de desconto do INSS.
