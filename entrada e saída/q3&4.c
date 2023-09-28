@@ -27,7 +27,7 @@ int main()
 
     switch(op)
     {
-         //Declarando as variáveis para graus Celsius e para Fahrenheit;
+        //Declarando as variáveis para graus Celsius e para Fahrenheit;
         float c;
 
         //Declarando as variáveis para graus Celsius e para Fahrenheit;

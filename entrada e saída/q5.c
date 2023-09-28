@@ -2,7 +2,8 @@
 #include<stdlib.h>
 
 //Calcular e apresentar o valor do volume de uma lata de óleo.
-int main (){
+int main ()
+{
     //Declaração da variável pi;
     float pi = 3.14;
     //Declaração das variáveis r = Raio, h = Altura;
