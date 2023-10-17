@@ -58,5 +58,27 @@
   ],
   "C_Cpp_Runner.useUndefinedSanitizer": false,
   "C_Cpp_Runner.useLeakSanitizer": false,
-  "C_Cpp_Runner.useLinkTimeOptimization": false
+  "C_Cpp_Runner.useLinkTimeOptimization": false,
+  "cSpell.words": [
+    "Apontador",
+    "Celula",
+    "chave",
+    "Chave",
+    "direita",
+    "feita",
+    "Implemente",
+    "Imprimir",
+    "Inicia",
+    "insercao",
+    "Insere",
+    "Lista",
+    "Operacao",
+    "ponteiro",
+    "primeiro",
+    "Primeiro",
+    "tamanho",
+    "Tipo",
+    "Vazia",
+    "verifica"
+  ]
 }
