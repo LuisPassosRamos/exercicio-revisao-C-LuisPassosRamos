@@ -12,7 +12,7 @@ int main() {
     //Cálculo da diferença e armazenamento do resultado;
     int diferenca = A - B;
     int resultado = diferenca * diferenca;
-    //Mostrando resutado ao usuário;
+    //Mostrando resultado ao usuário.
     printf("O quadrado da diferença entre A e B é: %d\n", resultado);
 
     return 0;

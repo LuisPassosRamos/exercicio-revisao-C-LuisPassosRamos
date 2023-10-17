@@ -21,7 +21,7 @@ int main(){
 
     printf ("\nDigite o valor da variável D: ");
     scanf("%d", &d);
-    //Mostrando o resultado das operações ao usuário
+    //Mostrando o resultado das operações ao usuário.
     printf("\nO valor da soma das variáveis A e B é igual a: %d, e a multiplicação entre as mesmas é igual a: %d", (a+b), (a*b));
     printf("\nO valor da soma das variáveis A e C é igual a: %d, e a multiplicação entre as mesmas é igual a: %d", (a+c), (a*c));
     printf("\nO valor da soma das variáveis A e D é igual a: %d, e a multiplicação entre as mesmas é igual a: %d", (a+d), (a*d));
