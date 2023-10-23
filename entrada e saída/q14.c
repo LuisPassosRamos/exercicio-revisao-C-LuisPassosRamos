@@ -12,7 +12,7 @@ int main(){
     printf("Digite o segundo valor\n");
     scanf("%f", &B);
 
-    printf("Digite o tercero valor\n");
+    printf("Digite o terceiro valor\n");
     scanf("%f", &C);
 
     printf("Digite o quarto valor\n");
