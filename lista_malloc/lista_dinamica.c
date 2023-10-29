@@ -16,11 +16,11 @@ struct Lista {
     struct Lista* proximo;
 };
 
-// Função para inserir um novo aluno em ordem crescente pela matrícula
+// Funcao para inserir um novo aluno em ordem crescente pela matricula
 void inserirAluno(struct Aluno** lista, int matricula, const char* nome, float media) {
     struct Aluno* novoAluno = (struct Aluno*)malloc(sizeof(struct Aluno));
     if (novoAluno == NULL) {
-        printf("Erro: Memória insuficiente para criar novo aluno.\n");
+        printf("Erro: Memoria insuficiente para criar novo aluno.\n");
         exit(1);
     }
 
@@ -42,7 +42,7 @@ void inserirAluno(struct Aluno** lista, int matricula, const char* nome, float m
     }
 }
 
-// Função para separar a lista em duas a partir da primeira ocorrência de n
+// Funcao para separar a lista em duas a partir da primeira ocorrencia de 'n'
 struct Lista* separa(struct Lista* l, int n) {
     struct Lista* atual = l;
 
@@ -58,7 +58,7 @@ struct Lista* separa(struct Lista* l, int n) {
     return NULL;
 }
 
-// Função para concatenar L2 no final de L1
+// Funcao para concatenar L2 no final de L1
 void concatena(struct Lista* l1, struct Lista* l2) {
     if (l1 == NULL) {
         l1 = l2;
@@ -71,7 +71,7 @@ void concatena(struct Lista* l1, struct Lista* l2) {
     }
 }
 
-// Função para construir uma lista a partir de um vetor de inteiros
+// Funcao para construir uma lista a partir de um vetor de inteiros
 struct Lista* construirLista(int vetor[], int n) {
     struct Lista* lista = NULL;
     struct Lista* atual = NULL;
@@ -93,7 +93,7 @@ struct Lista* construirLista(int vetor[], int n) {
     return lista;
 }
 
-// Função para trocar elementos de posição
+// Funï¿½ï¿½o para trocar elementos de posiï¿½ï¿½o
 void trocaPosicao(struct Lista* l, int pos1, int pos2) {
     if (l == NULL || pos1 == pos2) {
         return;
@@ -120,7 +120,7 @@ void trocaPosicao(struct Lista* l, int pos1, int pos2) {
     }
 
     if (no1 == NULL || no2 == NULL) {
-        printf("Posições inválidas.\n");
+        printf("Posiï¿½ï¿½es invï¿½lidas.\n");
         return;
     }
 
@@ -141,16 +141,16 @@ void trocaPosicao(struct Lista* l, int pos1, int pos2) {
     no2->proximo = temp;
 }
 
-// Função para imprimir a lista de alunos
+// Funï¿½ï¿½o para imprimir a lista de alunos
 void imprimirListaAlunos(struct Aluno* lista) {
     printf("Lista de Alunos:\n");
     while (lista != NULL) {
-        printf("Matrícula: %d, Nome: %s, Média: %.2f\n", lista->matricula, lista->nome, lista->media);
+        printf("Matrï¿½cula: %d, Nome: %s, Mï¿½dia: %.2f\n", lista->matricula, lista->nome, lista->media);
         lista = lista->proximo;
     }
 }
 
-// Função para imprimir a lista de inteiros
+// Funï¿½ï¿½o para imprimir a lista de inteiros
 void imprimirListaInteiros(struct Lista* lista) {
     printf("Lista de Inteiros:\n");
     while (lista != NULL) {
@@ -165,7 +165,7 @@ int main() {
     struct Lista* listaInteiros = NULL;
 
     // 1. Inserir alunos em ordem crescente
-    inserirAluno(&listaAlunos, 12345, "João", 8.5);
+    inserirAluno(&listaAlunos, 12345, "Joï¿½o", 8.5);
     inserirAluno(&listaAlunos, 56789, "Maria", 7.0);
     inserirAluno(&listaAlunos, 23456, "Pedro", 9.2);
 
@@ -179,7 +179,7 @@ int main() {
     struct Lista* listaInteiros2 = construirLista(outroVetorInteiros, 4);
     concatena(listaInteiros, listaInteiros2);
 
-    // 4. Trocar elementos de posição
+    // 4. Trocar elementos de posiï¿½ï¿½o
     trocaPosicao(listaInteiros, 1, 3);
 
     // 1. Imprimir lista de alunos
