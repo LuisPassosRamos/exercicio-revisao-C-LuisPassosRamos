@@ -33,17 +33,17 @@ bool insercao(lista_estatica *lista, int dado)
 int main()
 {
     lista_estatica myList;
-    inicializar(myList);
+    inicializar(&myList);
 
     for (int i = 0; i < 6; i++)
     {
-        if(insercao(&lista, i)){
-            printf("O dado foi inserido com sucesso.");
+        if(insercao(&myList, i)){
+            printf("\nO dado foi inserido com sucesso.");
         }else{
-            printf("A lista ja chegou no tamanho maximo");
+            printf("\nA lista ja chegou no tamanho maximo");
         }
     }
-    
+
 
     return 0;
 }
