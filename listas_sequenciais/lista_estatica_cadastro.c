@@ -94,6 +94,14 @@ void removeData(list* list, data data){
     }
 }
 
+void printList(list list1){
+    for (int i = 0; i < list1.size; i++){
+        if()
+        printf("Age: %d \n%f %d")
+    }
+    
+}
+
 int main(){
     list myList;
 
@@ -105,5 +113,5 @@ int main(){
         mylist.data[i] = temp;
     }
 
-
+    
 }
