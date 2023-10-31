@@ -55,3 +55,15 @@ void copyList (list list1, list* list2){
 
     list2->size = list1.size;
 }
+
+bool areEqual(list list1, list list2){
+    if (list1.size != list2.size){
+        return false;
+    }
+
+    for (int i = 0; i < list1.size; i++){
+        if (list1.data[i] == list2.data[i]){
+            return true;
+        }
+    }
+}
