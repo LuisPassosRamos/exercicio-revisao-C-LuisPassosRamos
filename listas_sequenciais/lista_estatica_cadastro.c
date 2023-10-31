@@ -79,4 +79,31 @@ bool areEqual(list list1, list list2)
             return true;
         }
     }
+
+    return false;
+}
+
+void removeData(list* list, data data){
+    for (int i = 0; i < list->size; i++){
+        if (list->data[i] == data){
+            for(int j = list->size; j > i; j--){
+                list->data[j-1] = list->data[j];
+            }
+            list->size--;
+        }
+    }
+}
+
+int main(){
+    list myList;
+
+    for(int i = 0; i < 10; i++){
+        data temp;
+        temp.age = i+1;
+        temp.height = i+1;
+        temp.ID = i+1;
+        mylist.data[i] = temp;
+    }
+
+
 }
