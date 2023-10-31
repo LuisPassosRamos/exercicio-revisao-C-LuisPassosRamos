@@ -39,6 +39,17 @@ bool insercaoPos (lista_estatica* lista, cadastro dado, int pos){
     return true;
 }
 
+bool insercao (lista_estatica* lista, cadastro dado){
+    if(lista->size >= MAX_SIZE){
+        return false;
+    }
+
+    lista->dado[lista->size] = dado;
+    lista->size++;
+
+    return true;
+}
+
 void impressao(lista_estatica lista){
     for (int i = 0; i < lista.size; i++)
     {
@@ -55,6 +66,8 @@ void copiar (lista_estatica lista1, lista_estatica* lista2){
         lista2->dado[i] = lista1.dado[i];
     }
 }
+
+
 
 int main()
 {
