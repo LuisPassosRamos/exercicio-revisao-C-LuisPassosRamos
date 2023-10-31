@@ -18,6 +18,7 @@ struct Lista {
 
 // Funcao para inserir um novo aluno em ordem crescente pela matricula
 void inserirAluno(struct Aluno** lista, int matricula, const char* nome, float media) {
+    
     struct Aluno* novoAluno = (struct Aluno*)malloc(sizeof(struct Aluno));
     if (novoAluno == NULL) {
         printf("Erro: Memoria insuficiente para criar novo aluno.\n");
