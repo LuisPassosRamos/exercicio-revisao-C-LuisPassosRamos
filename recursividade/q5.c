@@ -1,5 +1,5 @@
 #include <stdio.h>
-/*Crie uma função recursiva que retorne a soma dos elementos de um vetor de inteiros.*/
+/*Crie uma funcao recursiva que retorne a soma dos elementos de um vetor de inteiros.*/
 int somaVetorRecursiva(int vetor[], int n) {
     if (n == 0) {
         return 0; // Caso base: vetor vazio, soma é zero
